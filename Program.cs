@@ -4,24 +4,19 @@ namespace _20Nh15
 {
     class Program
     {
-        public static void HV(ref int a, ref int b)
-        {
-            int t = a;
-            a = b;
-            b = t;
-        }
-        public static void Add(out int c)
-        {
-            c = 5;
-        }
         static void Main(string[] args)
         {
-            int t;
-            int m = 1, n = 2;
-            HV(ref m, ref n);
-            Console.WriteLine("m={0}, n={1}", m, n);
-            Add(out t);
-            Console.WriteLine("t={0}", t);
+            //Parse() throw exception, TryParse() set the result value to 0 and 
+            //return False if cant parse
+            // int x;
+            // Console.Write("Input x= ");
+            // x = int.Parse(Console.ReadLine());
+            // Console.WriteLine("x+1= {0}", x + 1);
+            int y;
+            Console.Write("Input y= ");
+            int.TryParse(Console.ReadLine(), out y);
+            // use out because we dont know if y has value or not
+            Console.WriteLine("y+2= {0}", y + 2);
         }
     }
 }
