@@ -1,3 +1,3 @@
-# .NET
+# dotnet
 
-My code for .NET
+My code for .NET course
